@@ -1,0 +1,10 @@
+<div class="jumbotron">
+	<div class="container">
+		<%= form_for @quote do |q| %>
+		<h1><%= q.text_area :content, class: "col-md-12 text-center" %></h1>
+		<div class="col-md-4 text-center">Tags: </div>
+		<div class="col-md-4 text-center"><%= q.submit%></div>
+		<div class="col-md-4 text-center">Link: </div>
+		<% end %>
+	</div>
+</div>

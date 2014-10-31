@@ -1,5 +1,5 @@
 AncientAliensApp::Application.routes.draw do
-  resources :quotes, only: [:index, :show]
+  resources :quotes, only: [:index, :show, :edit, :update, :destroy]
   resource :session, only: [:new, :create, :destroy]
   root 'static_pages#random'
   match '/login', to: 'sessions#new', via: 'get'

@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html class='full'>
 <head>
-  <title>Ancient Wisdum</title>
+  <title>Ancient Ipsum</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <%= render partial: 'navbar' %>
-<%= yield %>
-
+<div class="container main-container">
+	<%= yield %>
+</div>
 </body>
 </html>

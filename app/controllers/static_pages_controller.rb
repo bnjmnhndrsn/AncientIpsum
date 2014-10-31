@@ -3,7 +3,7 @@ require 'json'
 class StaticPagesController < ApplicationController
   def random
     @quote = Quote.find(rand(Quote.count))
-    render 'quotes/show'
+    render :random
   end
   
   def search

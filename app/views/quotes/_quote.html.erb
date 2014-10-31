@@ -1,6 +1,6 @@
-<div>
-	<h1><%= quote.content %></h1>
+<div class="jumbotron">
+	<div class="quote-container text-center"><h1><%= quote.content %></h1></div>
 	<div class="col-md-4 text-center">Tags: </div>
-	<div class="col-md-4"></div>
-	<div class="col-md-4">Link: </div>
+	<div class="col-md-4 text-center"><%= link_to("Edit", edit_quote_path(quote.id)) if current_user %></div>
+	<div class="col-md-4 text-center">Link: <%= link_to quote_url(quote.id) %></div>
 </div>

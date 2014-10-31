@@ -1,7 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-h1 {
-	font-size:72px;
-	text-align:center;
+html {
+	background-image: image-url("sphinx_full.png");
+}
+
+body {
+	background-color: transparent;
+}
+.main-container {
+	background-color: none;
+	
 }
