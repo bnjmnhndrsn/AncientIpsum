@@ -1,5 +1,5 @@
-<ul>
-<% @quotes.each do |quote| %>
-	<li><%= quote.content %></li>
-<% end %>
-</ul>
+<div class="jumbotron">
+	<div class="container">
+		<%= render @quotes %>
+	</div>
+</div>
