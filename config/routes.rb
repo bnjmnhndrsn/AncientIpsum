@@ -1,7 +1,7 @@
 AncientAliensApp::Application.routes.draw do
   resources :quotes, only: [:index, :show, :edit, :update, :destroy]
   resource :session, only: [:new, :create, :destroy]
-  root 'static_pages#random'
+  root 'static_pages#root'
   match '/login', to: 'sessions#new', via: 'get'
   match '/signin', to: 'sessions#new', via: 'get'
   match '/signin', to: 'sessions#create', via: 'post'

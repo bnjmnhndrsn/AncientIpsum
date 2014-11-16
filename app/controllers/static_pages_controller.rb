@@ -9,5 +9,8 @@ class StaticPagesController < ApplicationController
   def search
     render :search
   end
+  
+  def root
+  end
 
 end
