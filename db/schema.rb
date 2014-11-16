@@ -11,11 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141029062537) do
+ActiveRecord::Schema.define(version: 20141031074701) do
 
   create_table "quotes", force: true do |t|
     t.text     "content"
     t.integer  "length"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "taggings", force: true do |t|
+    t.integer  "quote_id"
+    t.integer  "taag_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "taggings", ["quote_id"], name: "index_taggings_on_quote_id"
+  add_index "taggings", ["taag_id"], name: "index_taggings_on_taag_id"
+
+  create_table "tags", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

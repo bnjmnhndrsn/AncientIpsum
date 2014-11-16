@@ -8,4 +8,9 @@ AncientAliensApp::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: 'delete'
   match '/random', to: 'static_pages#random', via: 'get'
   match '/search', to: 'static_pages#search', via: 'get'
+  
+  namespace :api, defaults: { format: :json } do
+    resources :quotes, only: [:index]
+  end
+  
 end
