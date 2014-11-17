@@ -2,13 +2,35 @@
 @import "bootstrap";
 
 html {
-	background-image: image-url("sphinx_full.png");
+	background: image-url("sphinx_full.png") no-repeat center bottom #99bcd9;
+	min-height: 1200px;
 }
 
 body {
 	background-color: transparent;
 }
 .main-container {
-	background-color: none;
+	background-color: none;	
+}
+
+#text-container {
+	padding: 48px 60px;
+
+	h1 {
+		font-size: 50px;
+	}
+}
+
+.page-header {
+	border: none;
+	text-align: center;
+	margin-top: 0;
+	padding-top: 0;
 	
+	h1 {
+		font-size: 72px;
+		color: white;
+		letter-spacing: -3px;
+		text-transform: uppercase;
+	}
 }

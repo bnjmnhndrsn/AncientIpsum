@@ -1,19 +1,13 @@
 App.Routers.AppRouter = Backbone.Router.extend({
 	routes: {
-	  '': 'index',
+	  '': 'root',
 	},
-	index: function () {
-		
-		App.Collections.quotes.fetch({
-			success: function(){
-				var indexView = new App.Views.IndexView({
-					collection: App.Collections.quotes
-				});
-		
-				$("#app").html(indexView.render().$el);
-			}
+	root: function() {
+		var rootView = new App.Views.RootView({
+			collection: App.Collections.quotes
 		});
 		
-	
+		$("#app").html(rootView.render().$el);
 	}
 });
+

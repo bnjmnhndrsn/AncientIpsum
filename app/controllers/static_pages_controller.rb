@@ -11,6 +11,7 @@ class StaticPagesController < ApplicationController
   end
   
   def root
+     @quote = Quote.find(rand(Quote.count))
   end
 
 end
